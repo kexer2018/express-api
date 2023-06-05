@@ -9,8 +9,10 @@ const express = require('express')
 const userController = require('../controllers/userController')
 const upload = require('../util/upload')
 
+const router = express.Router()
+
 //查询所有的用户
-router.get('/user'.userController.getUsers)
+router.get('/user', userController.getUsers)
 
 //查询一条用户
 router.get('/getUser', userController.getUser)

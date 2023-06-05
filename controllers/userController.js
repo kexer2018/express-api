@@ -53,7 +53,7 @@ exports.updateUser = function (req, res) {
   })
 }
 
-exports.updateUserImage = function (req, res) {
+exports.uploadUserImage = function (req, res) {
   const { user_name } = req.query
   const { filename } = req.file
   mysql.query(userService.updateUserImage(filename, user_name)).then(() => {
